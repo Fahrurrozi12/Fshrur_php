@@ -25,3 +25,37 @@ require "array.php";
             echo $key . ':' . $value . PHP_EOL;
         }
     }
+
+<?php
+
+    // foreach ($ozy as $k => $value) {
+    //     if ($k == 'nilai' && $ozy['nilai'] 'A') {
+    //         continue;
+    //     }
+    //     if ($k == 'nilai' && $ozy['nilai'] 'D ') {
+    //         continue;
+    //     }
+    // }
+
+    foreach ($ozy['nilai'] as $k => $v) {
+        $s = "semester " . ($k + 1);
+        echo "nilai {$s} : {$v} \n";
+    
+        switch ($v) {
+            case 'A':
+                echo "Predikat {$s} : Sangat Baik \n";
+                break;
+            case 'B':
+                echo "Predikat {$s} : Baik \n";
+                break;
+            case 'C':
+                echo "Predikat {$s} : Cukup \n";
+                break;
+            case 'D':
+                echo "Predikat {$s} : Kurang \n";
+                break;
+            default:
+                echo "Predikat {$s} : - \n";
+                break;
+        }
+    }
